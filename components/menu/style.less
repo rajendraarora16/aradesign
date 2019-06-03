@@ -1,0 +1,207 @@
+.header-section {
+  .menu {
+    img {
+      transition: all .5s ease-in-out;
+    }
+    
+    &.active {
+      transform: rotate(180deg);
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.menu-wrapper {
+    position: fixed;
+    max-width: 420px;
+    width: 100%;
+    background: #fff;
+    right: -420px;
+    bottom: 0;
+    top: 0;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+      right: -100%;
+    }
+    &.show {
+        right: 0;
+    }
+    .close-menu {
+      padding: 40px 0;
+      .close {
+        display:flex;
+        padding: 25px;
+        cursor: pointer;
+          
+        &.cross {
+          position: absolute;
+          right: 40px;
+          top: 40px;
+          width: 75px;
+          height: 75px;
+          padding: 0;
+  
+          &:hover {
+            opacity: 1;
+          }
+  
+          &:before, &:after {
+            position: absolute;
+            left: 28px;
+            top: -13px;
+            content: ' ';
+            height: 35px;
+            width: 2px;
+            background-color: #000;
+            opacity: 1;
+          }
+  
+          &:before {
+            transition: all .5s ease-in-out;
+            transform: rotate(-90deg);
+          }
+  
+          &:after {
+            transition: all .5s ease-in-out;
+            transform: rotate(-180deg);
+          }
+          &.active {
+            &:before {
+              transform: rotate(45deg);
+            }
+    
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        span {
+          margin-left: auto;
+          font-size: 21px;
+          position: absolute;
+          z-index: 2;
+          background: #fff;
+          font-size: 18px;
+        }
+      }
+    }
+    .close {
+      p {
+        font-size: 14px;
+        color: #3d3d3d;
+        line-height: 18px;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+      }
+      &.bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0px;
+          margin-bottom: 25px;
+          padding: 0 25px;
+          width: 100%;
+          span {
+            text-align: right;
+            display: block;
+            color: #4d4d4d;
+            font-family: 'IBM Plex Sans', sans-serif;
+          }
+      }
+    }
+    .nav {
+      padding:30px;
+      height: 85vh;
+      .menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 0;
+        //transition: all .5s ease-in-out;
+        -webkit-animation: drop 0.9s;
+        animation: drop 0.9s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        opacity: 1;
+        &:nth-child(2) {
+          -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+        }
+        &:nth-child(3) {
+          -webkit-animation-delay: 0.5s;
+                  animation-delay: 0.5s;
+        }
+        &:nth-child(4) {
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+
+        span {
+          cursor: pointer;
+          &.icon {
+            margin-right:10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #4d4d4d;
+            transition: all .5s ease-in-out;
+            border-radius: 3px;
+          }
+        }
+        &:hover {
+          span {
+            &.icon {
+              margin-right:10px;
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 20px solid #000;
+            }
+          }
+        }
+        .name {
+          font-size:21px;
+          color:#4d4d4d;
+          font-family: 'IBM Plex Sans', sans-serif;
+        }
+      }
+    }
+}
+
+@-webkit-keyframes drop {
+  from {
+    top: 0px;
+  }
+  70% {
+    top: 165px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  to {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes drop {
+  from {
+    top: 0px;
+  }
+  70% {
+    top: 165px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  to {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}

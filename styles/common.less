@@ -1,0 +1,40 @@
+@import './font.less';
+@import (css) url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap');
+@import (css) url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    font-smoothing: antialiased;
+    text-rendering:optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+// p, h1, h2, h3, h4, h5, h6, span {
+//     cursor: default;
+// }
+
+body {
+   cursor: url(http://aradesign.in/content/common/cursor.png) 26 22, default;
+   //cursor: url(http://aradesign.in/content/common/cursor.png), auto;
+    .main-container {
+        height: 100vh;
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 15px;
+        @media only screen and (max-width: 768px) {
+          padding: 0 25px;
+        }
+        @media only screen and (max-width: 558px) {
+            padding: 0 15px;
+        }
+    }
+}

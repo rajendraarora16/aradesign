@@ -1,0 +1,1 @@
+export const triangleImage = 'http://aradesign.in/content/common/menu-img.png'

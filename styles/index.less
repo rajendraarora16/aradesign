@@ -1,0 +1,237 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './common.less';
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    background-image: url("http://aradesign.in/content/common/bg-image.png");
+  }
+  .main-container {
+    height: 100vh;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media only screen and (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .super-container {
+      .row {
+        .container {
+          &.home-container {
+            .left-content {
+              position: absolute;
+              bottom: 0;
+              margin-bottom: 25px;
+              left: 0;
+              padding:0 15px;
+              @media only screen and (max-width: 768px) {
+                max-width: 100%;
+                width: 100vw;
+                padding: 20px;
+                position: fixed;
+                margin-bottom: 0px;
+              }
+              .title-text {
+                display: flex; 
+                padding-bottom: 5px;
+                @media only screen and (max-width: 558px) {
+                  padding-bottom: 10px;
+                }
+                .rw-sentence{
+                  font-size: 42px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 58px;
+                  display: flex;
+                  @media only screen and (max-width: 558px) {
+                    font-size: 40px;
+                    line-height: 47px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                .rw-sentence span{
+                  font-size: 38px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 58px;
+                  font-family: 'Montserrat', sans-serif;
+                  @media only screen and (max-width: 558px) {
+                    font-size: 40px;
+                    line-height: 47px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                .rw-words{
+                  display: inline;
+                  text-indent: 5px;
+                  @media only screen and (max-width: 558px) {
+                    text-indent: 5px;
+                  }
+                }
+                .rw-words-1 span{
+                  position: absolute;
+                  opacity: 0;
+                  overflow: hidden;
+                  -webkit-animation: rotateWord 12s linear infinite 0s;
+                  -ms-animation: rotateWord 12s linear infinite 0s;
+                  animation: rotateWord 12s linear infinite 0s;
+                }
+                .rw-words-1 span:nth-child(2) { 
+                    -webkit-animation-delay: 3s; 
+                  -ms-animation-delay: 3s; 
+                  animation-delay: 3s; 
+                }
+                .rw-words-1 span:nth-child(3) { 
+                    -webkit-animation-delay: 6s; 
+                  -ms-animation-delay: 6s; 
+                  animation-delay: 6s;
+                }
+                .rw-words-1 span:nth-child(4) { 
+                    -webkit-animation-delay: 9s; 
+                  -ms-animation-delay: 6s; 
+                  animation-delay: 9s; 
+                }
+                .rw-words-1 span:nth-child(5) { 
+                    -webkit-animation-delay: 12s; 
+                  -ms-animation-delay: 12s; 
+                  animation-delay: 12s; 
+                }
+                @-webkit-keyframes rotateWord {
+                  0% { opacity: 0; }
+                  2% { opacity: 0; -webkit-transform: translateY(30px); }
+                  5% { opacity: 1; -webkit-transform: translateY(0px);}
+                  17% { opacity: 1; -webkit-transform: translateY(0px); }
+                  20% { opacity: 0; -webkit-transform: translateY(-30px); }
+                  80% { opacity: 0; }
+                  100% { opacity: 0; }
+                }
+                @-ms-keyframes rotateWord {
+                    0% { opacity: 0; }
+                    2% { opacity: 0; -ms-transform: translateY(30px); }
+                    5% { opacity: 1; -ms-transform: translateY(0px);}
+                    17% { opacity: 1; -ms-transform: translateY(0px); }
+                    20% { opacity: 0; -ms-transform: translateY(-30px); }
+                    80% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                @keyframes rotateWord {
+                    0% { opacity: 0; }
+                    2% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+                    5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+                    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+                    20% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+                    80% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                @media screen and (max-width: 768px){
+                  .rw-sentence { font-size: 24px; line-height: 32px }
+                }
+                @media screen and (max-width: 320px){
+                  .rw-sentence { font-size: 18px; line-height: 28px; }
+                }
+              }
+              
+              p {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 28px;
+                margin: 0;
+                width: 665px;
+                padding: 20px 0 0;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                  padding: 20px 0;
+                  width: 100%;
+                }
+              }
+              h4 {
+                font-size:21px;
+                color:#fff;
+                font-weight:700;
+                line-height:24px;
+                padding:20px 0 0;
+                margin:0;
+                font-family: 'IBM Plex Sans', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size:16px;
+                }
+              }
+            }
+            .column-right {
+              .project-sliders {
+                position: relative;
+                width: 100%;
+                @media only screen and (max-width: 768px) {
+                  display: none;
+                }
+                .slider-section {
+                  width: 350px;
+                  height:70vh;
+                  position: absolute;
+                  right: 15px;
+                  top: 0;
+                  transition: all .5s ease-in-out;
+                  display: none;
+                   .slick-slider {
+                    max-width: 350px;
+                    width: 100%;
+                  }
+                  @media only screen and (max-width: 768px) {
+                    width: 100%;
+                    height: auto;
+                  }
+                  img {
+                    height:70vh;
+                    @media only screen and (max-width: 768px) {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+              .bullets {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding:25px 25px 0;
+                width: 250px;
+                display: flex;
+                justify-content: flex-end;
+                cursor: default;
+                @media only screen and (max-width: 768px) {
+                  display: none;
+                }
+                .list {
+                  padding:15px 0;
+                  span {
+                    margin: 0 5px;
+                    cursor: pointer;
+                    img {
+                      width:20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+@keyframes move {
+  0%  { top: 0px; }
+  20% { top: -32px; }
+  40% { top: -64px; }
+  60% { top: -96px; }
+  80% { top: -128px; }
+}

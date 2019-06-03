@@ -1,0 +1,161 @@
+@import './common.less';
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    background-image: url("http://aradesign.in/content/common/bg-image.png");
+  }
+  .main-container {
+    height: 100vh;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media only screen and (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .super-container {
+      .row {
+        .container {
+          &.contact-container {
+            img {
+              cursor: default !important;
+            }
+            .__react_component_tooltip.place-top {
+              z-index: 99;
+              padding: 10px;
+              background-color: #fff !important;
+              }
+              .project-lst {
+                background: #fff;
+                // max-height: 200px;
+                .list {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 10px;
+                  border-bottom: 1px solid #ddd;
+                  .image {
+                    width: 100px;
+                    margin-right: 10px;
+                  }
+                  .name {
+                    span {
+                      font-size:22px;
+                      color:#333;
+                      font-weight:700;
+                      line-height:26px;
+                      padding:20px 0 0;
+                      margin:0;
+                      font-family: 'IBM Plex Sans', sans-serif;
+                    }
+                  }
+                }
+              }
+            .left-content {
+              position: absolute;
+              bottom: 0;
+              margin-bottom: 25px;
+              left: 0;
+              padding:0 15px;
+              z-index: 99;
+              @media only screen and (max-width: 768px) {
+                max-width: 100%;
+                width: 100vw; 
+                padding: 20px;
+                position: fixed;
+                margin-bottom: 0px;
+              }
+              .title-text {
+                display: flex; 
+                padding-bottom: 10px;
+                .rw-sentence{
+                  font-size: 42px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 52px;
+                  @media only screen and (max-width: 558px) {
+                    font-size: 38px;
+                    line-height: 37px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                .rw-sentence span{
+                  font-size: 38px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 52px;
+                  font-family: 'Montserrat', sans-serif;
+                  @media only screen and (max-width: 558px) {
+                    font-size: 38px;
+                    line-height: 37px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                
+                @media screen and (max-width: 768px){
+                  .rw-sentence { font-size: 24px; line-height: 32px }
+                }
+                @media screen and (max-width: 320px){
+                  .rw-sentence { font-size: 18px; line-height: 28px; }
+                }
+              }
+              
+              p {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 28px;
+                margin: 0;
+                width: 665px;
+                padding: 20px 0 0;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                  padding: 20px 0;
+                  width: 100%;
+                }
+                span {
+                  cursor: pointer;
+                }
+              }
+              h4 {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 28px;
+                padding:20px 0 0;
+                margin:0;
+                font-family: 'IBM Plex Sans', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size:16px;
+                  line-height:23px;
+                }
+                a {
+                  font-size: 18px;
+                  color: #fff;
+                  font-weight: 400;
+                  line-height: 28px;
+                  padding:20px 0 0;
+                  margin:0;
+                  font-family: 'IBM Plex Sans', sans-serif;
+                  text-decoration: none;
+                  @media only screen and (max-width: 558px) {
+                    font-size:16px;
+                    line-height:23px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
