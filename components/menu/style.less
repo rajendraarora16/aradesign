@@ -1,22 +1,30 @@
 .header-section {
   .menu {
+    transform: rotate(0deg);
+    transition: all .5s ease-in-out;
+      img {
+        transform: rotate(0deg);
+      }
     img {
       transition: all .5s ease-in-out;
     }
+    &.none {
+      display: none;
+    }
     
     &.active {
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
       img {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
   }
 }
 .menu-wrapper {
     position: fixed;
-    max-width: 420px;
+    max-width: 280px;
     width: 100%;
-    background: #fff;
+    background: rgba(0,0,0,0.6);
     right: -420px;
     bottom: 0;
     top: 0;
@@ -34,8 +42,7 @@
       .close {
         display:flex;
         padding: 25px;
-        cursor: pointer;
-          
+        cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
         &.cross {
           position: absolute;
           right: 40px;
@@ -55,7 +62,7 @@
             content: ' ';
             height: 35px;
             width: 2px;
-            background-color: #000;
+            background-color: #fff;
             opacity: 1;
           }
   
@@ -85,13 +92,14 @@
           z-index: 2;
           background: #fff;
           font-size: 18px;
+          cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
         }
       }
     }
     .close {
       p {
         font-size: 14px;
-        color: #3d3d3d;
+        color: #fff;
         line-height: 18px;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 20px;
@@ -106,7 +114,7 @@
           span {
             text-align: right;
             display: block;
-            color: #4d4d4d;
+            color: #fff;
             font-family: 'IBM Plex Sans', sans-serif;
           }
       }
@@ -117,7 +125,6 @@
       .menu {
         display: flex;
         align-items: center;
-        cursor: pointer;
         padding: 10px 0;
         //transition: all .5s ease-in-out;
         -webkit-animation: drop 0.9s;
@@ -142,34 +149,17 @@
         }
 
         span {
-          cursor: pointer;
           &.icon {
-            margin-right:10px;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 20px solid #4d4d4d;
-            transition: all .5s ease-in-out;
-            border-radius: 3px;
-          }
-        }
-        &:hover {
-          span {
-            &.icon {
-              margin-right:10px;
-              width: 0;
-              height: 0;
-              border-left: 10px solid transparent;
-              border-right: 10px solid transparent;
-              border-bottom: 20px solid #000;
-            }
+            height: 22px;
+            margin-right: 20px;
+            cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
           }
         }
         .name {
           font-size:21px;
-          color:#4d4d4d;
+          color:#fff;
           font-family: 'IBM Plex Sans', sans-serif;
+          cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
         }
       }
     }

@@ -104,6 +104,7 @@ class ReactSlickDemo extends Component {
                                 <div className="details-section">
                                     <h2>Ankita Kuriakose</h2>
                                     <p>Associate</p>
+                                    <p>Ankita graduated from Rachna Sansad Academy of Architecture with a skill set of sketching and layout planning. She interned with Somaya Kalapa Consultants at Fort and worked on Maharashtra Arts & Crafts Center. She is close to completing a decade with ARA and has mastered Design along with detailing. </p>
                                 </div>
                             </div>
                             <div className="column" style={peopleCard}>
@@ -113,6 +114,7 @@ class ReactSlickDemo extends Component {
                                 <div className="details-section">
                                     <h2>Pankaj Panwar</h2>
                                     <p>Associate</p>
+                                    <p>Born and brought up in Indore, Pankaj completed his Bachelor of Architecture from Indore professional studies Academy (IPS), Indore. He has been majorly involved in designing project of the F&B sector and it is now his forte. </p>
                                 </div>
                             </div>
                             <div className="column" style={peopleCard}>
@@ -122,6 +124,8 @@ class ReactSlickDemo extends Component {
                                 <div className="details-section">
                                     <h2>Raunak Shah</h2>
                                     <p>Associate</p>
+                                    <p>Raunak finished his Bachelors & Masters in Interior Design from ST. Francis Institute of Art & Design (SFIAD), Mumbai in the city where he grew up. After graduation he has been an integral part of ARA where he has enjoyed hands on site experience and explored project management.
+                                    </p>
                                 </div>
                             </div>
                             <div className="column" style={peopleCard}>
@@ -131,15 +135,7 @@ class ReactSlickDemo extends Component {
                                 <div className="details-section">
                                     <h2>Rajdeep Modak</h2>
                                     <p>Senior Architect</p>
-                                </div>
-                            </div>
-                            <div className="column" style={peopleCard}>
-                                <div className="image-wrapper">
-                                    <img src="http://aradesign.in/content/people/solo_010.jpg" />
-                                </div>
-                                <div className="details-section">
-                                    <h2>Twinkle Kataria</h2>
-                                    <p>Design & Communication</p>
+                                    <p>Rajdeep did his Bachelors from VIVA School of Architecture. He then moved from Mumbai to intern at Environ Planners in Nashik, where he had the opportunity to work on both architecture and interior projects of varied scales. Over the years his expertise in architecture projects has made him travel extensively.                                    </p>                                    
                                 </div>
                             </div>
                         </Slider>

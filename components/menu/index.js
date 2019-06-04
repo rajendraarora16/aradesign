@@ -8,21 +8,24 @@ const Menu = () => {
     const [active, setActive] = useState(false)
     const toggleActive = (e) => {
         setActive(!active)
-        !active && document.getElementById('menu-triangle') ? document.getElementById('menu-triangle').classList.add('active') : document.getElementById('menu-triangle').classList.remove('active')
-          setTimeout(function(){
+        setTimeout(function(){
+            !active && document.getElementById('menu-triangle') ? document.getElementById('menu-triangle').classList.add('none') : document.getElementById('menu-triangle').classList.remove('none')
             !active && document.getElementById('menu-close') ? document.getElementById('menu-close').classList.add('active') : document.getElementById('menu-close').classList.remove('active')
-          }, 200);
+        }, 200);
+        setTimeout(function(){
+            !active && document.getElementById('menu-triangle') ? document.getElementById('menu-triangle').classList.add('none') : document.getElementById('menu-triangle').classList.remove('none')
+        }, 300);
     }   
     const linkList = [
         {
             text: 'HOME',
-            url: '/'
+            url: '/home'
         },{
             text: 'PROJECTS',
-            url: '/project-list'
+            url: '/projects'
         },{
-            text: 'OUR PEOPLE',
-            url: '/people'
+            text: 'ABOUT',
+            url: '/about'
         },{
             text: 'CONTACT',
             url: '/contact'
@@ -62,7 +65,7 @@ const Menu = () => {
 
     return (
         <div>
-            <a href="javascript:void(0);" className="menu" id="menu-triangle" onClick={toggleActive}>
+            <a href="javascript:void(0);" className={active ? 'menu active' : 'menu'} id="menu-triangle" onClick={toggleActive}>
                 <img src={triangleImage} />
             </a>
             <div className={`menu-wrapper ${active ? 'show' : 'hide'}`}>

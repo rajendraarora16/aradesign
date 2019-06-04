@@ -20,9 +20,14 @@ img {
 // p, h1, h2, h3, h4, h5, h6, span {
 //     cursor: default;
 // }
-
+a {
+    cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
+}
 body {
-   cursor: url(http://aradesign.in/content/common/cursor.png) 26 22, default;
+   cursor: url(http://aradesign.in/content/common/white-cursor.png) 15 13, default;
+    padding: 0;
+    margin: 0;
+    background: #000;
    //cursor: url(http://aradesign.in/content/common/cursor.png), auto;
     .main-container {
         height: 100vh;
@@ -30,6 +35,7 @@ body {
         max-width: 1280px;
         margin: 0 auto;
         padding: 0 15px;
+        z-index: 3;
         @media only screen and (max-width: 768px) {
           padding: 0 25px;
         }
@@ -38,3 +44,5 @@ body {
         }
     }
 }
+
+

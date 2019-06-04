@@ -1,0 +1,198 @@
+{
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/index.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/contact.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-list.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-detail.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/screen-pattern/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/people-detail/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/about-detail/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/people-list/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/header/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/menu/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/logo/style.less": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": []
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!node_modules/slick-carousel/slick/slick.css 0": 0,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!node_modules/slick-carousel/slick/slick-theme.css 0": 1,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/people-list/style.less 0": 2,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/people-detail/style.less 0": 3,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/about-detail/style.less 0": 4,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/menu/style.less 0": 5,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/logo/style.less 0": 6,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/header/style.less 0": 7,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!components/screen-pattern/style.less 0": 8,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/contact.less 0": 9,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/contact.less 1": 10,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/contact.less 2": 11,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/index.less 0": 12,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/index.less 1": 13,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/index.less 2": 14,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-detail.less 0": 15,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-detail.less 1": 16,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-detail.less 2": 17,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-list.less 0": 18,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-list.less 1": 19,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/less-loader/dist/cjs.js??ref--5-2!styles/project-list.less 2": 20
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20
+    }
+  },
+  "chunks": {
+    "byName": {},
+    "bySource": {},
+    "usedIds": []
+  }
+}

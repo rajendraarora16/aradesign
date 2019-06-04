@@ -61,8 +61,6 @@ function PeopleDetail() {
                         </div>
                     </div>
                 </div>
-                <div className="scroll-text">Scroll</div>
-                <div class="container-arrow__arrow"></div>
             </div>
         </div>
     )

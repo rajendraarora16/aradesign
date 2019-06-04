@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import ReactTooltip from 'react-tooltip'
 import Header from '../components/header'
+import Pattern from '../components/screen-pattern'
 import { triangleImage } from '../constants/variables'
 import '../styles/contact.less'
 
@@ -41,34 +41,6 @@ class Contact extends Component {
                                                 CONTACT FOR MORE INFORMATION TEL: <a href="tel:91-2226482236">91-2226482236</a>, <a href="tel:91-2226482237">91-2226482237</a>, MOBILE: <a href="91-9820143289">91-9820143289</a>, EMAIL: <a href="contact@aradesign.in ">contact@aradesign.in </a><br/>
                                                 ADDRESS: <a href="https://goo.gl/maps/9XAd2XqWz3mjJ9j17" target="_blank">1st Floor, Dwarka, 57 Tagore Road, Santacruz (W), Mumbai, Maharashtra 400054</a>
                                             </h4>
-                                            <ReactTooltip id='georgia' globalEventOff='click'>
-                                                <div className="project-lst">
-                                                    <div className="list">
-                                                        <div className="image">
-                                                            <img src="http://aradesign.in/content/project/thumbnail/hermosa_1.jpg" />
-                                                        </div>
-                                                        <div className="name">
-                                                            <span>Hermosa Studio</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="list">
-                                                        <div className="image">
-                                                            <img src="http://aradesign.in/content/project/thumbnail/hermosa_1.jpg" />
-                                                        </div>
-                                                        <div className="name">
-                                                            <span>Hermosa Studio</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="list">
-                                                        <div className="image">
-                                                            <img src="http://aradesign.in/content/project/thumbnail/hermosa_1.jpg" />
-                                                        </div>
-                                                        <div className="name">
-                                                            <span>Hermosa Studio</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </ReactTooltip>
                                         </div>
                                     </div>
                                 </div>
@@ -76,6 +48,7 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
+                <Pattern />
             </Fragment>
         )
     }
