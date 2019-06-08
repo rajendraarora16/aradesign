@@ -11,6 +11,7 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.ShowProjects = this.ShowProjects.bind(this);
+        this.closeModal = this.closeModal.bind(this)
         this.state = {showModal: false, cityName: '', }
     }
     state = {
@@ -43,6 +44,11 @@ class Contact extends Component {
     ShowProjects = (e) => {
        this.setState({ showModal: true, cityName: e.target.getAttribute('data-id') })
     }  
+
+    closeModal = (e) => {
+        this.setState({ showModal: false, cityName: '' })
+    }
+
     render() {
         console.log('this.state.data', this.state.cityName)
         return (
@@ -93,7 +99,7 @@ class Contact extends Component {
                             this.state.showModal
                                 ? (
                                     <div className="modal-wrapper">
-                                        <div className="close-menu" ><div className="close cross active"  id="menu-close"></div></div>
+                                        <div className="close-menu" ><div className="close cross active"  id="menu-close" onClick={this.closeModal}></div></div>
                                         <div className="modal-body">
                                             <div className="list">
                                                 {this.state.data.map((item, index) => (

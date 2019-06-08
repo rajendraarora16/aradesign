@@ -1739,13 +1739,13 @@ function (_Component) {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, item.name));
@@ -1758,14 +1758,14 @@ function (_Component) {
         "data-id": item.cityname,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, item.cityname, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "pipe",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 40
         },
         __self: this
       }, "|"));
@@ -1778,7 +1778,15 @@ function (_Component) {
       });
     });
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "closeModal", function (e) {
+      _this.setState({
+        showModal: false,
+        cityName: ''
+      });
+    });
+
     _this.ShowProjects = _this.ShowProjects.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.closeModal = _this.closeModal.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.state = {
       showModal: false,
       cityName: ''
@@ -1811,38 +1819,11 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "main-container contact-us",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "row",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "container",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "super-container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
@@ -1856,17 +1837,44 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "container contact-container",
+        className: "container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 58
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "super-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "row",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "container contact-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "map-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
@@ -1875,14 +1883,14 @@ function (_Component) {
         usemap: "#planetmap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 66
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("map", {
         name: "planetmap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("area", {
@@ -1894,7 +1902,7 @@ function (_Component) {
         target: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("area", {
@@ -1906,7 +1914,7 @@ function (_Component) {
         target: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("area", {
@@ -1918,7 +1926,7 @@ function (_Component) {
         target: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 70
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("area", {
@@ -1930,54 +1938,54 @@ function (_Component) {
         target: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 71
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "grid",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 74
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "column",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "left-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "title-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 77
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
         className: "rw-sentence",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 78
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 79
         },
         __self: this
       }, "A part of us everywhere"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 82
         },
         __self: this
       }, this.state.data && this.state.data.map(function (item, index) {
@@ -1985,14 +1993,14 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 84
           },
           __self: this
         }, _this3.renderCityList(item, index));
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 89
         },
         __self: this
       }, "ADDRESS: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -2000,76 +2008,77 @@ function (_Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 90
         },
         __self: this
       }, "1st Floor, Dwarka, 57 Tagore Road, Santacruz (W), Mumbai, Maharashtra 400054"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 90
         },
         __self: this
       }), "TEL: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "tel:91-2226482236",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 91
         },
         __self: this
       }, "91-2226482236"), ", ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "tel:91-2226482237",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 91
         },
         __self: this
       }, "91-2226482237"), ",\xA0\xA0\xA0  EMAIL: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "contact@aradesign.in ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 91
         },
         __self: this
       }, "contact@aradesign.in "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 91
         },
         __self: this
       }))))))), this.state.showModal ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "modal-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 101
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "close-menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "close cross active",
         id: "menu-close",
+        onClick: this.closeModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 102
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "modal-body",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 104
         },
         __self: this
       }, this.state.data.map(function (item, index) {
@@ -2077,14 +2086,14 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100
+            lineNumber: 106
           },
           __self: this
         }, _this3.renderProjectList(item, index));
       })))) : null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_screen_pattern__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 118
         },
         __self: this
       }));
