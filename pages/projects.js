@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 import Slider from 'react-slick'
 import Header from '../components/header'
 import Pattern from '../components/screen-pattern'
@@ -51,7 +52,7 @@ class ProjectList extends Component {
 
     componentDidMount() {
         axios
-            .get('https://api.myjson.com/bins/1dzs7j')
+            .get('https://api.myjson.com/bins/r6s4d')
             .then(res => this.setState({ data: res.data }))
             .catch(error => console.log(`error => ${error}`))
     }
@@ -67,11 +68,14 @@ class ProjectList extends Component {
                 <div className="project-slider">
                     <SimpleSlider images={item.projectImages} />
                 </div>
-                <div className="project-overlay">
-                    <div className="details-section">
-                        <h2>{item.name}</h2>
+                <Link href={`project-detail?id=${item.id}`} as={`project-detail?id=${item.id}`}>
+                    <div className="project-overlay">
+                        <div className="details-section">
+                            <h2><strong>{item.name}</strong></h2>
+                            <h2>{item.type}</h2>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
     )
@@ -89,7 +93,7 @@ class ProjectList extends Component {
                         <div className="row">
                             <div className="container project-container">
                                 <div className='grid'>
-                                    {this.state.data.map((item, index) => (
+                                    {this.state.data && this.state.data.map((item, index) => (
                                         <Fragment key={index}>
                                             {this.renderProjectList(item, index)}
                                         </Fragment>

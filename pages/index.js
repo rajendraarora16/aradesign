@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Scramble from 'react-scramble'
 import Header from '../components/header'
 import Pattern from '../components/screen-pattern'
 import { triangleImage } from '../constants/variables'
@@ -23,35 +22,18 @@ class Home extends Component {
                                         <div className="left-content">
                                             <div className="title-text">
                                                 <h2 className="rw-sentence">
-                                                    <span>We are -</span>
-                                                    <div className="rw-words rw-words-1">
-                                                        <span>Wholistic</span>
-                                                        <span>Miesian</span>
-                                                        <span>Gestalt</span>
-                                                        <span>Pragmatic</span>
+                                                    <span>We are</span>
+                                                    <div class="rw-words rw-words-1">
+                                                        <span>geometry from memories</span>
+                                                        <span>nuances of native</span>
+                                                        <span>creators of current</span>
+                                                        <span>life in layers</span>
                                                     </div>
                                                 </h2>
                                             </div>
                                             <p>ARA Designs characterizes architecture as an art and investigation of ensuring our urban
                                             communities and structures fit with our varied clientele exhibits our diverse work exposure. 
                                             </p>
-                                            <h4>
-                                                <Scramble
-                                                    autoStart
-                                                    text="HOME"
-                                                    steps={[
-                                                    {
-                                                        roll: 10,
-                                                        action: '+',
-                                                        type: 'all',
-                                                    },
-                                                    {
-                                                        action: '-',
-                                                        type: 'forward',
-                                                    },
-                                                    ]}
-                                                />
-                                                </h4>
                                         </div>
                                     </div>
                                 </div>
@@ -62,9 +44,11 @@ class Home extends Component {
                 <div className="screen__video">
                     <video  autoPlay="autoplay" loop playsInline="" muted="">
                         <source src="http://aradesign.in/content/common/vid.mp4" type="video/mp4" />
+                        <source src="http://aradesign.in/content/common/vid.webm" type="video/webm" />
+                        <source src="http://aradesign.in/content/common/vid.ogg" type="video/ogg" />
                     </video>
                 </div>
-                <Pattern />
+                <Pattern animate />
             </Fragment>
         )
     }

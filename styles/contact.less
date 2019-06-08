@@ -5,6 +5,9 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 15px;
+    &.contact-us {
+      overflow: hidden;
+    }
     @media only screen and (max-width: 768px) {
       padding: 0 25px;
     }
@@ -107,7 +110,6 @@
                 font-weight: 400;
                 line-height: 28px;
                 margin: 0;
-                width: 665px;
                 padding: 20px 0 0;
                 font-family: 'Montserrat', sans-serif;
                 @media only screen and (max-width: 558px) {
@@ -115,6 +117,16 @@
                   line-height: 18px;
                   padding: 20px 0;
                   width: 100%;
+                }
+                span {
+                  .pipe {
+                    margin: 0 5px;
+                  }
+                  &:last-child {
+                    .pipe {
+                      display: none;
+                    }
+                  }
                 }
               }
               h4 {
@@ -144,6 +156,97 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+      .modal-wrapper {
+        width: 400px;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        z-index: 99;
+        .close-menu {
+          padding: 20px 0;
+          .close {
+            display:flex;
+            padding: 25px;
+            cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
+            &.cross {
+              position: absolute;
+              right: 20px;
+              top: 20px;
+              width: 30px;
+              height: 30px;
+              padding: 0;
+              @media only screen and (max-width: 768px) {
+                width: 30px;
+                height: 30px;
+              }
+              &:hover {
+                opacity: 1;
+              }
+      
+              &:before, &:after {
+                position: absolute;
+                left: 28px;
+                top: -13px;
+                content: ' ';
+                height: 35px;
+                width: 2px;
+                background-color: #fff;
+                opacity: 1;
+              }
+      
+              &:before {
+                transition: all .5s ease-in-out;
+                transform: rotate(-90deg);
+              }
+      
+              &:after {
+                transition: all .5s ease-in-out;
+                transform: rotate(-180deg);
+              }
+              &.active {
+                &:before {
+                  transform: rotate(45deg);
+                }
+        
+                &:after {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+            span {
+              margin-left: auto;
+              font-size: 21px;
+              position: absolute;
+              z-index: 2;
+              background: #fff;
+              font-size: 18px;
+              cursor: url(http://aradesign.in/content/common/red-cursor.png) 15 13, default;
+            }
+          }
+        }
+        .modal-body {
+          padding: 0px 30px;
+          width: 400px;
+          height: 180px;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          .list {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 400;
+            line-height: 28px;
+            margin:0;
+            font-family: 'IBM Plex Sans', sans-serif;
+            div {
+              padding:8px 0;
             }
           }
         }

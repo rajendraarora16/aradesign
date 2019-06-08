@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react'
+import axios from 'axios'
+import Link from 'next/link'
 import Header from '../components/header'
 import Pattern from '../components/screen-pattern'
 import { triangleImage } from '../constants/variables'
@@ -6,10 +8,46 @@ import '../styles/contact.less'
 
 
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.ShowProjects = this.ShowProjects.bind(this);
+        this.state = {showModal: false, cityName: '', }
+    }
+    state = {
+        data: []
+    }
+
+    componentDidMount() {
+        axios
+            .get('https://api.myjson.com/bins/160o11')
+            .then(res => this.setState({ data: res.data }))
+            .catch(error => console.log(`error => ${error}`))
+        // axios
+        //     .get('https://api.myjson.com/bins/1d2a9n')
+        //     .then(res => this.setState({ data: res.data }))
+        //     .catch(error => console.log(`error => ${error}`))
+    }
+
+    renderProjectList = (item, index) => (
+        <div key={index}>
+            <strong>{item.name}</strong>
+        </div>
+    )
+
+    renderCityList = (item, index) => (
+        <span key={index} onClick={this.ShowProjects} data-id={item.cityname}>
+            {item.cityname}<span className="pipe">|</span>
+        </span>
+    )
+
+    ShowProjects = (e) => {
+       this.setState({ showModal: true, cityName: e.target.getAttribute('data-id') })
+    }  
     render() {
+        console.log('this.state.data', this.state.cityName)
         return (
             <Fragment>
-                <div className="main-container">
+                <div className="main-container contact-us">
                     <div className="row">
                         <div className="container">
                             <Header />
@@ -34,18 +72,41 @@ class Contact extends Component {
                                                 <h2 className="rw-sentence">
                                                     <span>A part of us everywhere</span>
                                                 </h2>
-                                            </div>
-                                            <p><span data-tip data-for='georgia' data-event='click focus'>Georgia</span> | <span>Dubai</span> | <span>Abu Dhabi</span> |   <span>UK</span>  | <span>Qatar</span> |
-                                            <span>Mumbai</span> |  <span>Delhi</span> | <span>Bengaluru</span> | <span>Chennai</span> | <span>Hyderabad</span> |   <span>Kolkata</span> | </p>
+                                            </div>  
+                                            <p>
+                                                {this.state.data && this.state.data.map((item, index) => (
+                                                    <Fragment key={index}>
+                                                        {this.renderCityList(item, index)}
+                                                    </Fragment>
+                                                ))}
+                                            </p>
                                             <h4>
-                                                CONTACT FOR MORE INFORMATION TEL: <a href="tel:91-2226482236">91-2226482236</a>, <a href="tel:91-2226482237">91-2226482237</a>, MOBILE: <a href="91-9820143289">91-9820143289</a>, EMAIL: <a href="contact@aradesign.in ">contact@aradesign.in </a><br/>
-                                                ADDRESS: <a href="https://goo.gl/maps/9XAd2XqWz3mjJ9j17" target="_blank">1st Floor, Dwarka, 57 Tagore Road, Santacruz (W), Mumbai, Maharashtra 400054</a>
+                                                ADDRESS: <a href="https://goo.gl/maps/9XAd2XqWz3mjJ9j17" target="_blank">1st Floor, Dwarka, 57 Tagore Road, Santacruz (W), Mumbai, Maharashtra 400054</a><br />
+                                                TEL: <a href="tel:91-2226482236">91-2226482236</a>, <a href="tel:91-2226482237">91-2226482237</a>,&nbsp;&nbsp;&nbsp;  EMAIL: <a href="contact@aradesign.in ">contact@aradesign.in </a><br/>                                               
                                             </h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        {
+                            this.state.showModal
+                                ? (
+                                    <div className="modal-wrapper">
+                                        <div className="close-menu" ><div className="close cross active"  id="menu-close"></div></div>
+                                        <div className="modal-body">
+                                            <div className="list">
+                                                {this.state.data.map((item, index) => (
+                                                    <Fragment key={index}>
+                                                        {this.renderProjectList(item, index)}
+                                                    </Fragment>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                                : null
+                        }
                     </div>
                 </div>
                 <Pattern />

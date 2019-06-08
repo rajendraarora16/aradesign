@@ -33,6 +33,7 @@ class SimpleSlider extends Component {
             autoplaySpeed: 2000
         }
         const { images } = this.props
+        console.log('images', images)
         return (
             <div className="sliderWrapper" onMouseEnter={this.play} onMouseLeave={this.pause}>
                 <Slider {...settings} ref={slider => (this.slider = slider)}>
@@ -55,12 +56,16 @@ class PeopleDetail extends Component {
         this.state = {isModalOpen: false }
     }
     state = {
-        data: []
+        data: [],
+        projectID: ''
     }
 
     componentDidMount() {
+        const projectID = window.location.search.split('=')[1]
+        this.setState({ projectID: projectID - 1 })
+
         axios
-            .get('https://api.myjson.com/bins/160sf3')
+            .get('https://api.myjson.com/bins/164rel')
             .then(res => this.setState({ data: res.data }))
             .catch(error => console.log('Err: ', error))
     }
@@ -86,45 +91,69 @@ class PeopleDetail extends Component {
             <Fragment>
                 <div className="column column-right">
                     <div className="detail-content">
-                        <h2>
-                            <Scramble
-                                autoStart
-                                text={`${data.name}`}
-                                steps={[
-                                {
-                                    roll: 5,
-                                    action: '+',
-                                    type: 'all',
-                                },
-                                {
-                                    action: '-',
-                                    type: 'forward',
-                                },
-                                ]}
-                            /> 
-                        </h2>
+                        {
+                            data.name && (
+                                <h2>
+                                    <Scramble
+                                        autoStart
+                                        text={`${data.name}`}
+                                        steps={[
+                                        {
+                                            roll: 5,
+                                            action: '+',
+                                            type: 'all',
+                                        },
+                                        {
+                                            action: '-',
+                                            type: 'forward',
+                                        },
+                                        ]}
+                                    /> 
+                                </h2>
+                            )
+                        }
                         <div className="tags">
-                            <span>
-                            {data.location.toUpperCase()} |
-                            </span>
-                            <span>
-                            {data.type.toUpperCase()} |
-                            </span>
-                            <span>
-                            {data.status.toUpperCase()} |
-                            </span>
-                            <span>
-                                {data.size.toUpperCase()} |
-                            </span>
+                            {
+                                data.location && (
+                                    <span>
+                                        {data.location.toUpperCase()} |
+                                    </span>
+                                )
+                            }
+                            {
+                                data.type && (
+                                    <span>
+                                        {data.type.toUpperCase()} |
+                                    </span>
+                                )
+                            }
+                            {
+                                data.status && (
+                                    <span>
+                                        {data.status.toUpperCase()} |
+                                    </span>
+                                )
+                            }
+                            {
+                                data.size && (
+                                    <span>
+                                        {data.size.toUpperCase()} |
+                                    </span>
+                                )
+                            }
                         </div>
-                        <p>{data.details}</p>
+                        {
+                            data.details && (
+                                <p>{data.details}</p>
+                            )
+                        }
                     </div>
                 </div>
             </Fragment>
-        )
+        )    
     }
     render() {
-        const { data, isModalOpen } = this.state
+        const { data, isModalOpen, projectID } = this.state
         return (
             <Fragment>
                 <div className="main-container">
@@ -139,10 +168,10 @@ class PeopleDetail extends Component {
                                 <div className='grid'>
                                     <div className="column column-left">
                                         <div className="slider-section" onClick={this.handleClick}>
-                                            {data && data.length > 0 && this.renderProjectDetailSlider(data[0])}
+                                            {data && data.length > 0 && projectID && this.renderProjectDetailSlider(data[projectID])}
                                         </div>
                                     </div>
-                                    {data && data.length > 0 && this.renderProjectDetail(data[0])}
+                                    {data && data.length > 0 && projectID && this.renderProjectDetail(data[projectID])}
                                 </div>
                             </div>
                         </div>
@@ -154,7 +183,7 @@ class PeopleDetail extends Component {
                                     <div className="slider-inner">
                                         <div className="column column-left">
                                             <div className="slider-section">
-                                                {data.length > 0 && this.renderProjectDetailSlider(data[0])}
+                                                {data.length > 0 && projectID  && this.renderProjectDetailSlider(data[projectID])}
                                             </div>
                                         </div>
                                     </div>

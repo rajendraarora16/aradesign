@@ -76,7 +76,7 @@ const Menu = () => {
                 <div className="close bottom">
                     <p>At ARA Design from extensive urban plans to the littlest of furniture subtleties, our work consistently weaves interior and exterior spaces.
                     </p>
-                    <span>MENU</span>
+                    <span><a href="https://www.instagram.com/ara.designs_firm/" target="_balnk" ><img src="http://aradesign.in/content/common/insta.png" alt="instagram aradesign" /></a></span>
                 </div>
             </div>
         </div>
