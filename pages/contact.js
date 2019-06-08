@@ -14,6 +14,14 @@ class Contact extends Component {
         this.closeModal = this.closeModal.bind(this)
         this.state = {showModal: false, cityName: '', }
     }
+
+    static async getInitialProps({req}) {
+        const res = await axios({
+            url: 'https://api.myjson.com/bins/r6s4d'
+          });
+          return {dataLocation : res.data}
+    }
+
     state = {
         data: []
     }
@@ -29,11 +37,19 @@ class Contact extends Component {
         //     .catch(error => console.log(`error => ${error}`))
     }
 
-    renderProjectList = (item, index) => (
-        <div key={index}>
-            <strong>{item.name}</strong>
-        </div>
-    )
+    renderProjectList = (data) => {
+        const locationD = data.filter(location => {
+            return location.location.toLowerCase() == this.state.cityName.toLowerCase()
+        })
+        console.log('locationD: ', locationD)
+        return (
+            (locationD == '' || locationD) ? locationD.map((data, index) => {
+                <div className="foo" key={index}>
+                    <strong>{data.name}</strong>
+                </div>
+            }) : <div>Rajendra</div>
+        )
+    }       
 
     renderCityList = (item, index) => (
         <span key={index} onClick={this.ShowProjects} data-id={item.cityname}>
@@ -63,7 +79,7 @@ class Contact extends Component {
                         <div className="row">
                             <div className="container contact-container">
                                 <div className="map-section">
-                                    <img src="https://expertschoice.in/ara/team/ara-map.png" alt="" usemap="#planetmap"/>
+                                    <img src="https://expertschoice.in/ara/team/ara-map.png" alt="" useMap="#planetmap"/>
                                     <map name="planetmap">
                                         <area shape="circle" alt="red" title="" coords="847,308,7" href="javascript:void(0);" target="" />
                                         <area shape="circle" alt="red" title="" coords="847,302,7" href="javascript:void(1);" target="" />
@@ -102,11 +118,9 @@ class Contact extends Component {
                                         <div className="close-menu" ><div className="close cross active"  id="menu-close" onClick={this.closeModal}></div></div>
                                         <div className="modal-body">
                                             <div className="list">
-                                                {this.state.data.map((item, index) => (
-                                                    <Fragment key={index}>
-                                                        {this.renderProjectList(item, index)}
-                                                    </Fragment>
-                                                ))}
+                                                {
+                                                    this.renderProjectList(__NEXT_DATA__.props.pageProps.dataLocation)
+                                                }
                                             </div>
                                         </div>
                                     </div>
