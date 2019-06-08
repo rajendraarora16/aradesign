@@ -37,7 +37,7 @@ function AboutDetail() {
                     </div>
                 </div>
                 <div className="scroll-text">Scroll</div>
-                <div class="container-arrow__arrow"></div>
+                <div className="container-arrow__arrow"></div>
             </div>
         </div>
     )

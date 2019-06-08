@@ -7,7 +7,7 @@ import Pattern from '../components/screen-pattern'
 
 const People = () => (
     <Fragment>
-        <div class="main-container">
+        <div className="main-container">
             <div className="row">
                 <div className="container">
                     <Header />

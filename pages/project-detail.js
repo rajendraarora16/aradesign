@@ -179,7 +179,7 @@ class PeopleDetail extends Component {
                             isModalOpen 
                             && (
                                 <div className="slider-popup" onClick={this.closeClick}>
-                                    <div class="close-menu"><div class={isModalOpen ? 'close cross active' : 'close cross'}></div></div>
+                                    <div className="close-menu"><div className={isModalOpen ? 'close cross active' : 'close cross'}></div></div>
                                     <div className="slider-inner">
                                         <div className="column column-left">
                                             <div className="slider-section">

@@ -23,7 +23,7 @@ class Home extends Component {
                                             <div className="title-text">
                                                 <h2 className="rw-sentence">
                                                     <span>We are</span>
-                                                    <div class="rw-words rw-words-1">
+                                                    <div className="rw-words rw-words-1">
                                                         <span>geometry from memories</span>
                                                         <span>nuances of native</span>
                                                         <span>creators of current</span>
